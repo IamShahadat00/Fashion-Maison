@@ -1,0 +1,17 @@
+G:\My Projects\Fashion-Maison\backend\Maison.BLL\bin\Debug\net10.0\Maison.BLL.deps.json
+G:\My Projects\Fashion-Maison\backend\Maison.BLL\bin\Debug\net10.0\Maison.BLL.dll
+G:\My Projects\Fashion-Maison\backend\Maison.BLL\bin\Debug\net10.0\Maison.BLL.pdb
+G:\My Projects\Fashion-Maison\backend\Maison.BLL\bin\Debug\net10.0\Maison.DAL.dll
+G:\My Projects\Fashion-Maison\backend\Maison.BLL\bin\Debug\net10.0\Maison.Domain.dll
+G:\My Projects\Fashion-Maison\backend\Maison.BLL\bin\Debug\net10.0\Maison.Domain.pdb
+G:\My Projects\Fashion-Maison\backend\Maison.BLL\bin\Debug\net10.0\Maison.DAL.pdb
+G:\My Projects\Fashion-Maison\backend\Maison.BLL\obj\Debug\net10.0\Maison.BLL.csproj.AssemblyReference.cache
+G:\My Projects\Fashion-Maison\backend\Maison.BLL\obj\Debug\net10.0\Maison.BLL.GeneratedMSBuildEditorConfig.editorconfig
+G:\My Projects\Fashion-Maison\backend\Maison.BLL\obj\Debug\net10.0\Maison.BLL.AssemblyInfoInputs.cache
+G:\My Projects\Fashion-Maison\backend\Maison.BLL\obj\Debug\net10.0\Maison.BLL.AssemblyInfo.cs
+G:\My Projects\Fashion-Maison\backend\Maison.BLL\obj\Debug\net10.0\Maison.BLL.csproj.CoreCompileInputs.cache
+G:\My Projects\Fashion-Maison\backend\Maison.BLL\obj\Debug\net10.0\Maison.BLL.csproj.Up2Date
+G:\My Projects\Fashion-Maison\backend\Maison.BLL\obj\Debug\net10.0\Maison.BLL.dll
+G:\My Projects\Fashion-Maison\backend\Maison.BLL\obj\Debug\net10.0\refint\Maison.BLL.dll
+G:\My Projects\Fashion-Maison\backend\Maison.BLL\obj\Debug\net10.0\Maison.BLL.pdb
+G:\My Projects\Fashion-Maison\backend\Maison.BLL\obj\Debug\net10.0\ref\Maison.BLL.dll

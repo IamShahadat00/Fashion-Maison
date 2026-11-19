@@ -1,0 +1,6 @@
+@Maison.API_HostAddress = http://localhost:5125
+
+GET {{Maison.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

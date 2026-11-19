@@ -1,0 +1,12 @@
+G:\My Projects\Fashion-Maison\backend\Maison.Domain\bin\Debug\net10.0\Maison.Domain.deps.json
+G:\My Projects\Fashion-Maison\backend\Maison.Domain\bin\Debug\net10.0\Maison.Domain.dll
+G:\My Projects\Fashion-Maison\backend\Maison.Domain\bin\Debug\net10.0\Maison.Domain.pdb
+G:\My Projects\Fashion-Maison\backend\Maison.Domain\obj\Debug\net10.0\Maison.Domain.GeneratedMSBuildEditorConfig.editorconfig
+G:\My Projects\Fashion-Maison\backend\Maison.Domain\obj\Debug\net10.0\Maison.Domain.AssemblyInfoInputs.cache
+G:\My Projects\Fashion-Maison\backend\Maison.Domain\obj\Debug\net10.0\Maison.Domain.AssemblyInfo.cs
+G:\My Projects\Fashion-Maison\backend\Maison.Domain\obj\Debug\net10.0\Maison.Domain.csproj.CoreCompileInputs.cache
+G:\My Projects\Fashion-Maison\backend\Maison.Domain\obj\Debug\net10.0\Maison.Domain.dll
+G:\My Projects\Fashion-Maison\backend\Maison.Domain\obj\Debug\net10.0\refint\Maison.Domain.dll
+G:\My Projects\Fashion-Maison\backend\Maison.Domain\obj\Debug\net10.0\Maison.Domain.pdb
+G:\My Projects\Fashion-Maison\backend\Maison.Domain\obj\Debug\net10.0\ref\Maison.Domain.dll
+G:\My Projects\Fashion-Maison\backend\Maison.Domain\obj\Debug\net10.0\Maison.D.70CB19EE.Up2Date

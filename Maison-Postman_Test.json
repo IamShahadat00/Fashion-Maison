@@ -1,0 +1,136 @@
+{
+  "info": {
+    "name": "Maison De L'Elegance - Commercial Publishing & Dual Approval",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "BASE_URL", "value": "http://localhost:5125" },
+    { "key": "ADMIN_TOKEN", "value": "1" },
+    { "key": "AUDIT_TOKEN", "value": "2" },
+    { "key": "PM_TOKEN", "value": "3" }
+  ],
+  "item": [
+    {
+      "name": "1. Login - System Admin",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"admin@maisondelegance.com\",\n  \"password\": \"Admin@123456\"\n}"
+        },
+        "url": "{{BASE_URL}}/api/Auth/login"
+      }
+    },
+    {
+      "name": "2. Admin - Provision Audit Officer (RoleId 6)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{ADMIN_TOKEN}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"fullName\": \"Arthur Pendelton (Audit Officer)\",\n  \"email\": \"audit@maisondelegance.com\",\n  \"password\": \"Audit@123456\",\n  \"roleId\": 6,\n  \"phoneNumber\": \"+1-800-AUDIT\"\n}"
+        },
+        "url": "{{BASE_URL}}/api/Auth/admin/create-user"
+      }
+    },
+    {
+      "name": "3. Admin - Provision Product Manager (RoleId 2)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{ADMIN_TOKEN}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"fullName\": \"Claire Delacroix (Product Manager)\",\n  \"email\": \"pm@maisondelegance.com\",\n  \"password\": \"Staff@123456\",\n  \"roleId\": 2,\n  \"phoneNumber\": \"+1-800-PRODUCT\"\n}"
+        },
+        "url": "{{BASE_URL}}/api/Auth/admin/create-user"
+      }
+    },
+    {
+      "name": "4. PM - Stage New Haute Couture Product",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{PM_TOKEN}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"categoryId\": 2,\n  \"title\": \"Architectural Cashmere Cape\",\n  \"editorialStory\": \"Sculpted tailoring inspired by 1950s Parisian ateliers.\",\n  \"fashionEra\": \"1950 Architectural Golden Hour\",\n  \"sku\": \"MDL-CAPE-001\",\n  \"costOfGoodsSold\": 300.00,\n  \"targetPrice\": 850.00,\n  \"stockQuantity\": 50,\n  \"imageUrl\": \"/images/cape.jpg\"\n}"
+        },
+        "url": "{{BASE_URL}}/api/Products/stage"
+      }
+    },
+    {
+      "name": "5. PM - Submit High-Risk Price Drop (Triggers Tier 3 Dual Approval)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{PM_TOKEN}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"productId\": \"{{PRODUCT_ID}}\",\n  \"newTargetPrice\": 650.00,\n  \"justification\": \"Flash promotional pricing for winter runway.\"\n}"
+        },
+        "url": "{{BASE_URL}}/api/Products/price-change"
+      }
+    },
+    {
+      "name": "6. Audit Officer - View Tier 3 Gate 1 Pending Verification Queue",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{AUDIT_TOKEN}}" }
+        ],
+        "url": "{{BASE_URL}}/api/WorkflowApprovals/audit-queue"
+      }
+    },
+    {
+      "name": "7. Audit Officer - Approve Gate 1 (Verify COGS Margin)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{AUDIT_TOKEN}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"approved\": true,\n  \"reason\": \"Confirmed $650 price maintains positive 53.8% gross margin above $300 COGS.\"\n}"
+        },
+        "url": "{{BASE_URL}}/api/Products/{{PRODUCT_ID}}/audit-verify"
+      }
+    },
+    {
+      "name": "8. Admin - Approve Gate 2 & Publish Live on Storefront",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{ADMIN_TOKEN}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"approved\": true,\n  \"reason\": \"ERP inventory verified. Pushed live to storefront catalog.\"\n}"
+        },
+        "url": "{{BASE_URL}}/api/Products/{{PRODUCT_ID}}/admin-publish"
+      }
+    },
+    {
+      "name": "9. Audit Officer - View Immutable Audit Trail",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{AUDIT_TOKEN}}" }
+        ],
+        "url": "{{BASE_URL}}/api/AuditLogs?limit=50"
+      }
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Maison.API/Maison.API.csproj" />
+  <Project Path="Maison.BLL/Maison.BLL.csproj" />
+  <Project Path="Maison.DAL/Maison.DAL.csproj" />
+  <Project Path="Maison.Domain/Maison.Domain.csproj" />
+</Solution>
